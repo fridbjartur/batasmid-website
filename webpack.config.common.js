@@ -9,8 +9,8 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html', { ignore: './src/
     filename: path.basename(dir), // Output
     template: dir, // Input
     minify: {
-     removeComments: true,
-     collapseWhitespace: true,
+      removeComments: true,
+      collapseWhitespace: true,
     },
   }),
 );

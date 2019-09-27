@@ -4,12 +4,13 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Static HTML Site Boilerplate</title>
+		<title>BATASMID</title>
 	</head>
 
 	<body>
-		${require('./partials/title.html')}
-		<a href="/page.html">Link to my other page</a>
-		<img src="/static/tail.png" alt="code" />
+		${require('./partials/header/header.html')}
+		${require('./partials/hero/hero.html')}
+		${require('./partials/main/main.html')}
+		${require('./partials/footer/footer.html')}
 	</body>
 </html>
