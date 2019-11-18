@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-ExtraBoldItalic.eot');
+    src: url('../static/fonts/Ines-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-ExtraBoldItalic.woff2') format('woff2'),
+        url('../static/fonts/Ines-ExtraBoldItalic.woff') format('woff'),
+        url('../static/fonts/Ines-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-ExtraBold.eot');
+    src: url('../static/fonts/Ines-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-ExtraBold.woff2') format('woff2'),
+        url('../static/fonts/Ines-ExtraBold.woff') format('woff'),
+        url('../static/fonts/Ines-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-Bold.eot');
+    src: url('../static/fonts/Ines-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-Bold.woff2') format('woff2'),
+        url('../static/fonts/Ines-Bold.woff') format('woff'),
+        url('../static/fonts/Ines-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-LightItalic.eot');
+    src: url('../static/fonts/Ines-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-LightItalic.woff2') format('woff2'),
+        url('../static/fonts/Ines-LightItalic.woff') format('woff'),
+        url('../static/fonts/Ines-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-Heavy.eot');
+    src: url('../static/fonts/Ines-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-Heavy.woff2') format('woff2'),
+        url('../static/fonts/Ines-Heavy.woff') format('woff'),
+        url('../static/fonts/Ines-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ines-BookItalic';
+    src: url('../static/fonts/Ines-BookItalic.eot');
+    src: url('../static/fonts/Ines-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-BookItalic.woff2') format('woff2'),
+        url('../static/fonts/Ines-BookItalic.woff') format('woff'),
+        url('../static/fonts/Ines-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-HeavyItalic.eot');
+    src: url('../static/fonts/Ines-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-HeavyItalic.woff2') format('woff2'),
+        url('../static/fonts/Ines-HeavyItalic.woff') format('woff'),
+        url('../static/fonts/Ines-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-BoldItalic.eot');
+    src: url('../static/fonts/Ines-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-BoldItalic.woff2') format('woff2'),
+        url('../static/fonts/Ines-BoldItalic.woff') format('woff'),
+        url('../static/fonts/Ines-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-Medium.eot');
+    src: url('../static/fonts/Ines-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-Medium.woff2') format('woff2'),
+        url('../static/fonts/Ines-Medium.woff') format('woff'),
+        url('../static/fonts/Ines-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ines-Roman';
+    src: url('../static/fonts/Ines-Roman.eot');
+    src: url('../static/fonts/Ines-Roman.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-Roman.woff2') format('woff2'),
+        url('../static/fonts/Ines-Roman.woff') format('woff'),
+        url('../static/fonts/Ines-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ines-RomanItalic';
+    src: url('../static/fonts/Ines-RomanItalic.eot');
+    src: url('../static/fonts/Ines-RomanItalic.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-RomanItalic.woff2') format('woff2'),
+        url('../static/fonts/Ines-RomanItalic.woff') format('woff'),
+        url('../static/fonts/Ines-RomanItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-MediumItalic.eot');
+    src: url('../static/fonts/Ines-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-MediumItalic.woff2') format('woff2'),
+        url('../static/fonts/Ines-MediumItalic.woff') format('woff'),
+        url('../static/fonts/Ines-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ines';
+    src: url('../static/fonts/Ines-Light.eot');
+    src: url('../static/fonts/Ines-Light.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-Light.woff2') format('woff2'),
+        url('../static/fonts/Ines-Light.woff') format('woff'),
+        url('../static/fonts/Ines-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ines-Book';
+    src: url('../static/fonts/Ines-Book.eot');
+    src: url('../static/fonts/Ines-Book.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/Ines-Book.woff2') format('woff2'),
+        url('../static/fonts/Ines-Book.woff') format('woff'),
+        url('../static/fonts/Ines-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

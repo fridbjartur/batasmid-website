@@ -1,6 +1,36 @@
-// 1. Customize default variables
+#{$table-selector} {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/04-components/table';
+  th,
+  td {
+    padding: $table-padding-vertical $table-padding-horizontal;
+    border-bottom: 1px solid $table-border-color;
+    vertical-align: top;
+  }
 
-// 3. Add your own styles here
+  th {
+    text-align: left;
+  }
+
+  thead th {
+    border-bottom-width: 2px;
+    vertical-align: bottom;
+  }
+
+  @if $table-stripe-bg {
+    tbody tr:nth-child(2n+1) {
+      background-color: $table-stripe-bg;
+    }
+  }
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

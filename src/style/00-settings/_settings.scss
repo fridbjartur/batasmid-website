@@ -1,6 +1,138 @@
-// 1. Customize default variables
+// Global
+$font-antialiased: false !default;
+$font-size-base: 1.2rem !default;
+$font-family-base: 'Ines-Roman' !default;
+$font-weight-base: normal !default;
+$line-height-base: 1.7 !default;
+$global-bg: #111111 !default;
+$text-color: #fff !default;
+$transparent-color: rgba(255, 255, 255, 0) !default;
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/00-settings/settings';
 
-// 3. Add your own styles here
+// Spacing
+$spacing-base: 1.5rem !default;
+$spacing-reset: true !default;
+$spacers: (
+  nospace: 0,
+  space: 30px
+) !default;
+
+
+// Headings
+$headings: (
+  'h1, .h1', 'h2, .h2', 'h3, .h3',
+  'h4, .h4', 'h5, .h5', 'h6, .h6'
+) !default;
+
+$headings-spacing: 0.4em !default;
+$headings-font-family: inherit !default;
+$headings-font-weight: 700 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: inherit !default;
+
+$type-scale-base: $font-size-base !default;
+$type-scale: 1.25 !default;
+
+
+// Link
+$link-color: #0283f1 !default;
+$link-hover-color: $link-color !default;
+$link-decoration: none !default;
+$link-hover-decoration: underline !default;
+
+
+// Breakpoints
+$mq-breakpoints: (
+  xs: 0,
+  sm: 400px,
+  md: 680px,
+  lg: 960px,
+  xl: 1200px
+) !default;
+
+$mq-static-breakpoint: nth(map-keys($mq-breakpoints), length($mq-breakpoints)) !default;
+
+
+// Grid
+$grid-fallback: true !default;
+$grid-columns: 12 !default;
+$grid-gutter: 80px !default;
+$grid-gutter: (
+  xs: 60px,
+  md: 80px,
+);
+$grid-container: nth(map-values($mq-breakpoints), length($mq-breakpoints)) !default;
+$grid-container-gutter: $grid-gutter !default;
+
+$grid-pull-classes: true !default;
+$grid-push-classes: true !default;
+$grid-offset-classes: true !default;
+
+// Form
+$input-selector: (
+  '[type="email"]',
+  '[type="number"]',
+  '[type="password"]',
+  '[type="search"]',
+  '[type="tel"]',
+  '[type="text"]',
+  '[type="url"]',
+  'textarea',
+  'select'
+) !default;
+
+$input-height: 2.375em !default;
+$input-padding-vertical: 0.375em !default;
+$input-padding-horizontal: 0.75em !default;
+$input-bg: #fff !default;
+$input-color: $text-color !default;
+$input-border-color: #b6b6b6 !default;
+$input-focus-border-color: darken($input-border-color, 20%) !default;
+$input-border-radius: 0.125em !default;
+$input-transition: border-color 0.15s ease !default;
+$input-disabled-bg: #eee !default;
+$input-disabled-color: #555 !default;
+$input-disabled-border-color: #ccc !default;
+
+$placeholder-color: lighten($input-color, 50%) !default;
+
+
+// Icons
+$icon-color: #333 !default;
+
+$icon-radio: "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='#{$icon-color}' d='M4 1C2.3 1 1 2.3 1 4s1.3 3 3 3 3-1.3 3-3S5.7 1 4 1z'/%3E%3C/svg%3E" !default;
+$icon-checkbox: "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='#{$icon-color}' d='M6.4 1L5.7 1.7 2.9 4.5 2.1 3.7 1.4 3 0 4.4l0.7 0.7 1.5 1.5 0.7 0.7 0.7-0.7 3.5-3.5 0.7-0.7L6.4 1 6.4 1z'/%3E%3C/svg%3E" !default;
+$icon-select: "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='8' width='12' viewBox='0 0 12 8' fill='#{$icon-color}'%3E%3Cpath fill='none' d='m-0.91525-1.4714h24v24h-24z'/%3E%3Cpath d='m1.41 0 4.59 4.58 4.59-4.58 1.41 1.41l-6 6-6-6z'/%3E%3C/svg%3E" !default;
+
+$icons: (
+  radio: $icon-radio,
+  checkbox: $icon-checkbox,
+  select: $icon-select
+) !default;
+
+
+// Button
+$button-selector: '.btn' !default;
+$button-padding-vertical: 0.375em !default;
+$button-padding-horizontal: 1em !default;
+$button-bg: transparent !default;
+$button-color: $text-color !default;
+$button-border-width: 1px !default;
+$button-border-color: $text-color !default;
+$button-border-radius: 0.125em !default;
+$button-hover-bg: transparent !default;
+$button-hover-color: $button-border-color !default;
+$button-hover-border-color: $button-border-color !default;
+$button-active-bg: $button-hover-bg !default;
+$button-active-color: $button-hover-color !default;
+$button-disabled-opacity: 0.65 !default;
+$button-transition: background-color 0.15s ease, color 0.15s ease !default;
+$button-cursor-pointer: true !default;
+
+
+// Table
+$table-selector: '.table' !default;
+$table-padding-vertical: 0.4em !default;
+$table-padding-horizontal: 0.6em !default;
+$table-border-color: #dedede !default;
+$table-stripe-bg: #efefef !default;

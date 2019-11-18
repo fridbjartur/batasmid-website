@@ -1,6 +1,13 @@
-// 1. Customize default variables
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/05-utilities/position';
+.pull-left {
+  float: left !important;
+}
 
-// 3. Add your own styles here
+.pull-right {
+  float: right !important;
+}

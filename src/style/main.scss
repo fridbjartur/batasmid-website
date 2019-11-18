@@ -21,6 +21,8 @@
 @import '04-components/form-custom';
 @import '04-components/button';
 @import '04-components/table';
+@import '04-components/burger';
+@import '04-components/progress-indicator';
 
 // Utilities
 @import '05-utilities/space';
@@ -31,12 +33,25 @@
 @import '05-utilities/screenreader';
 
 // 3. Add your own styles here
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  text-align: center;
+#hero{
+    height: 100vh;
+    position: relative;
+      overflow: hidden;
+
+    video{
+position: absolute;
+  top: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  margin: auto;
+  min-width: 100%;
+  min-height: 100%;
+    max-width: initial;
+    }
 }
 
-img {
-  display: block;
-  margin: 50px auto;
-}
+// .test1{
+//   background: red;
+//   align-self: flex-center;
+// }

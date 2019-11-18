@@ -1,6 +1,10 @@
-// 1. Customize default variables
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/02-base/link';
-
-// 3. Add your own styles here
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}

@@ -1,6 +1,19 @@
-// 1. Customize default variables
+@each $size, $length in $spacers {
+  .#{$size} {
+    margin-bottom: to-rem($length) !important;
+  }
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/05-utilities/space';
+  @include loop-breakpoints($inclusive: false) {
+    .#{$size}-#{$breakpoint} {
+      margin-bottom: to-rem($length) !important;
+    }
+  }
 
-// 3. Add your own styles here
+  @include loop-breakpoints {
+    @if not $is-last-breakpoint {
+      .#{$size}-#{$breakpoint}-up {
+        margin-bottom: to-rem($length) !important;
+      }
+    }
+  }
+}

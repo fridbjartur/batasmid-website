@@ -1,6 +1,17 @@
-// 1. Customize default variables
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  background-color: $global-bg;
+  color: $text-color;
+}
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/02-base/global';
-
-// 3. Add your own styles here
+@if $font-antialiased {
+  html,
+  button,
+  input {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}

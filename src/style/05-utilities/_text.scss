@@ -1,6 +1,27 @@
-// 1. Customize default variables
+.small {
+  font-size: $font-size-base * 0.8 !important;
+}
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/05-utilities/text';
+.text-left {
+  text-align: left !important;
+}
 
-// 3. Add your own styles here
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-hide {
+  @include text-hide;
+}
+
+.text-truncate {
+  @include text-truncate;
+}
+
+.text-hyphenate {
+  @include text-hyphenate;
+}

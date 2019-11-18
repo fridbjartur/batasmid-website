@@ -1,6 +1,51 @@
-// 1. Customize default variables
+// Print styles adapted from HTML5 Boilerplate: https://github.com/h5bp/html5-boilerplate
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/02-base/print';
+@media print {
+  *,
+  *::before,
+  *::after {
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-// 3. Add your own styles here
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  abbr[title]::after {
+    content: ' (' attr(title) ')';
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

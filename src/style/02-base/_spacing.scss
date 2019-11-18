@@ -1,6 +1,28 @@
-// 1. Customize default variables
+blockquote,
+figure,
+fieldset {
+  margin: 0;
+}
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/02-base/spacing';
+address,
+blockquote,
+table,
+figure,
+form,
+fieldset,
+legend,
+pre,
+dl,
+ul,
+ol,
+hr,
+p {
+  margin-top: 0;
+  margin-bottom: $spacing-base;
 
-// 3. Add your own styles here
+  @if $spacing-reset {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

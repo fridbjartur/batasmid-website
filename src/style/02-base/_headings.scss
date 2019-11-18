@@ -1,6 +1,14 @@
-// 1. Customize default variables
+#{$headings} {
+  margin-top: $headings-spacing * 2;
+  margin-bottom: $headings-spacing;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/02-base/headings';
+  &:first-child {
+    margin-top: 0;
+  }
+}
 
-// 3. Add your own styles here
+@include scale-headings;

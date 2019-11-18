@@ -1,6 +1,47 @@
-// 1. Customize default variables
+.invisible {
+  visibility: hidden !important;
+}
 
-// 2. Import Baseguide
-@import '~baseguide/scss/baseguide/05-utilities/visibility';
+.hidden {
+  display: none !important;
+}
 
-// 3. Add your own styles here
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}
+
+@include loop-breakpoints($mq: false) {
+  .visible-#{$breakpoint} {
+    display: none !important;
+  }
+
+  @if not ($is-first-breakpoint or $is-last-breakpoint) {
+    .visible-#{$breakpoint}-up {
+      display: none !important;
+    }
+  }
+}
+
+@include loop-breakpoints($inclusive: false) {
+  .hidden-#{$breakpoint} {
+    display: none !important;
+  }
+
+  .visible-#{$breakpoint} {
+    display: block !important;
+  }
+}
+
+@include loop-breakpoints {
+  @if not ($is-first-breakpoint or $is-last-breakpoint) {
+    .hidden-#{$breakpoint}-up {
+      display: none !important;
+    }
+
+    .visible-#{$breakpoint}-up {
+      display: block !important;
+    }
+  }
+}
