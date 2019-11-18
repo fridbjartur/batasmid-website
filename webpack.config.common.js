@@ -5,15 +5,15 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const generateHTMLPlugins = () => glob.sync('./src/**/*.html', { ignore: './src/partials/**' }).map(
-  dir => new HTMLWebpackPlugin({
-    filename: path.basename(dir), // Output
-    template: dir, // Input
-    minify: {
-      removeComments: true,
-      collapseWhitespace: true,
-    },
-  }),
-);
+    dir => new HTMLWebpackPlugin({
+        filename: path.basename(dir), // Output
+        template: dir, // Input
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+        },
+      }),
+  );
 
 module.exports = {
   node: {
@@ -52,10 +52,10 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
+              outputPath: 'fonts/',
+            },
+          },
+        ],
       },
     ],
   },

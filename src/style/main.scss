@@ -1,57 +1,58 @@
 @charset 'UTF-8';
-@import 'globals';
+@import "globals";
 
 // Base
-@import '02-base/normalize';
-@import '02-base/base';
-@import '02-base/global';
-@import '02-base/spacing';
-@import '02-base/headings';
-@import '02-base/link';
-@import '02-base/print';
+@import "02-base/normalize";
+@import "02-base/base";
+@import "02-base/global";
+@import "02-base/spacing";
+@import "02-base/headings";
+@import "02-base/link";
+@import "02-base/print";
 
 // Objects
-@import '03-objects/list';
-@import '03-objects/media';
-@import '03-objects/embed';
-@import '03-objects/grid';
+@import "03-objects/list";
+@import "03-objects/media";
+@import "03-objects/embed";
+@import "03-objects/grid";
 
 // Components
-@import '04-components/form';
-@import '04-components/form-custom';
-@import '04-components/button';
-@import '04-components/table';
-@import '04-components/burger';
-@import '04-components/progress-indicator';
+@import "04-components/form";
+@import "04-components/form-custom";
+@import "04-components/button";
+@import "04-components/table";
+@import "04-components/burger";
+@import "04-components/progress-indicator";
+@import "04-components/_slider-scroll";
 
 // Utilities
-@import '05-utilities/space';
-@import '05-utilities/position';
-@import '05-utilities/clearfix';
-@import '05-utilities/text';
-@import '05-utilities/visibility';
-@import '05-utilities/screenreader';
+@import "05-utilities/space";
+@import "05-utilities/position";
+@import "05-utilities/clearfix";
+@import "05-utilities/text";
+@import "05-utilities/visibility";
+@import "05-utilities/screenreader";
 
 // 3. Add your own styles here
-#hero{
-    height: 100vh;
-    position: relative;
-      overflow: hidden;
+#hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 
-    video{
-position: absolute;
-  top: -9999px;
-  right: -9999px;
-  bottom: -9999px;
-  left: -9999px;
-  margin: auto;
-  min-width: 100%;
-  min-height: 100%;
+  video {
+    position: absolute;
+    top: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
     max-width: initial;
-    }
+  }
 }
 
-// .test1{
-//   background: red;
-//   align-self: flex-center;
-// }
+.hey {
+  opacity: 0;
+  transition: all 1s;
+}

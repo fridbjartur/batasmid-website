@@ -1,13 +1,12 @@
 // Global
 $font-antialiased: false !default;
-$font-size-base: 1.2rem !default;
-$font-family-base: 'Ines-Roman' !default;
+$font-size-base: 1.3rem !default;
+$font-family-base: "Ines-Roman" !default;
 $font-weight-base: normal !default;
 $line-height-base: 1.7 !default;
 $global-bg: #111111 !default;
 $text-color: #fff !default;
 $transparent-color: rgba(255, 255, 255, 0) !default;
-
 
 // Spacing
 $spacing-base: 1.5rem !default;
@@ -17,12 +16,8 @@ $spacers: (
   space: 30px
 ) !default;
 
-
 // Headings
-$headings: (
-  'h1, .h1', 'h2, .h2', 'h3, .h3',
-  'h4, .h4', 'h5, .h5', 'h6, .h6'
-) !default;
+$headings: ("h1, .h1", "h2, .h2", "h3, .h3", "h4, .h4", "h5, .h5", "h6, .h6") !default;
 
 $headings-spacing: 0.4em !default;
 $headings-font-family: inherit !default;
@@ -33,13 +28,11 @@ $headings-color: inherit !default;
 $type-scale-base: $font-size-base !default;
 $type-scale: 1.25 !default;
 
-
 // Link
 $link-color: #0283f1 !default;
 $link-hover-color: $link-color !default;
 $link-decoration: none !default;
 $link-hover-decoration: underline !default;
-
 
 // Breakpoints
 $mq-breakpoints: (
@@ -52,14 +45,13 @@ $mq-breakpoints: (
 
 $mq-static-breakpoint: nth(map-keys($mq-breakpoints), length($mq-breakpoints)) !default;
 
-
 // Grid
 $grid-fallback: true !default;
 $grid-columns: 12 !default;
 $grid-gutter: 80px !default;
 $grid-gutter: (
   xs: 60px,
-  md: 80px,
+  md: 80px
 );
 $grid-container: nth(map-values($mq-breakpoints), length($mq-breakpoints)) !default;
 $grid-container-gutter: $grid-gutter !default;
@@ -77,8 +69,8 @@ $input-selector: (
   '[type="tel"]',
   '[type="text"]',
   '[type="url"]',
-  'textarea',
-  'select'
+  "textarea",
+  "select"
 ) !default;
 
 $input-height: 2.375em !default;
@@ -96,7 +88,6 @@ $input-disabled-border-color: #ccc !default;
 
 $placeholder-color: lighten($input-color, 50%) !default;
 
-
 // Icons
 $icon-color: #333 !default;
 
@@ -110,9 +101,8 @@ $icons: (
   select: $icon-select
 ) !default;
 
-
 // Button
-$button-selector: '.btn' !default;
+$button-selector: ".btn" !default;
 $button-padding-vertical: 0.375em !default;
 $button-padding-horizontal: 1em !default;
 $button-bg: transparent !default;
@@ -129,9 +119,8 @@ $button-disabled-opacity: 0.65 !default;
 $button-transition: background-color 0.15s ease, color 0.15s ease !default;
 $button-cursor-pointer: true !default;
 
-
 // Table
-$table-selector: '.table' !default;
+$table-selector: ".table" !default;
 $table-padding-vertical: 0.4em !default;
 $table-padding-horizontal: 0.6em !default;
 $table-border-color: #dedede !default;
