@@ -1,100 +1,85 @@
-import { TweenMax, TimelineMax } from 'gsap';
-import ScrollMagic from 'ScrollMagic';
-
-import navigation from './components/navigation';
+import smoothscroll from 'smoothscroll-polyfill';
+import navigation from './components/nav';
+import progressIndicator from './components/progress-indicator';
+import sliderProjects from './components/slider';
+import linkSMoothScroll from './components/smooth-scroll-link';
+import simpleSlider from './components/simple-slider';
 
 if (module.hot) {
   module.hot.accept();
 }
 
-navigation();
+function loadFallback() {
+  document.getElementById('loading').style.display = 'none';
+}
+setTimeout(loadFallback, 5000);
 
-const sliderWrapper = document.querySelectorAll('.slider-wrapper');
 
-// Init ScrollMagic
+window.addEventListener('load', () => {
+  document.getElementById('loading').style.display = 'none';
+});
+
+// Elements
+const paragraph = document.querySelectorAll('p');
+const sections = document.querySelectorAll('section');
+
+
+// Helpers
 const controller = new ScrollMagic.Controller();
 
-// create scene for every slide
-for (let i = 0; i < sliderWrapper.length; i++) {
-  if (i !== 0 && i < sliderWrapper.length - 1) {
-    tweens = new TimelineMax()
-      .add(
-        TweenMax.fromTo(
-          sliderWrapper[i].querySelector('.slider-item-right'),
-          2,
-          { x: '65vw', opacity: 0 },
-          { x: '0vw', opacity: 1 }
-        ),
-        'first'
-      )
-      .add(
-        TweenMax.fromTo(
-          sliderWrapper[i].querySelector('.slider-item-left'),
-          2,
-          { x: '-65vw', opacity: 0 },
-          { x: '0vw', opacity: 1 }
-        ),
-        'first'
-      )
-      .add(
-        TweenMax.to(sliderWrapper[i].querySelector('.slider-item-right'), 2, {
-          x: '-65vw',
-          opacity: 0
-        }),
-        'second'
-      )
-      .add(
-        TweenMax.to(sliderWrapper[i].querySelector('.slider-item-left'), 2, {
-          x: '65vw',
-          opacity: 0
-        }),
-        'second'
-      );
-  } else if (i == sliderWrapper.length - 1) {
-    tweens = new TimelineMax()
-      .add(
-        TweenMax.fromTo(
-          sliderWrapper[i].querySelector('.slider-item-right'),
-          2,
-          { x: '65vw', opacity: 0 },
-          { x: '0vw', opacity: 1 }
-        ),
-        'first'
-      )
-      .add(
-        TweenMax.fromTo(
-          sliderWrapper[i].querySelector('.slider-item-left'),
-          2,
-          { x: '-65vw', opacity: 0 },
-          { x: '0vw', opacity: 1 }
-        ),
-        'first'
-      );
-  } else {
-    tweens = new TimelineMax()
-      .add(
-        TweenMax.to(sliderWrapper[i].querySelector('.slider-item-right'), 2, {
-          x: '-65vw',
-          opacity: 0
-        }),
-        'first'
-      )
-      .add(
-        TweenMax.to(sliderWrapper[i].querySelector('.slider-item-left'), 2, {
-          x: '65vw',
-          opacity: 0
-        }),
-        'first'
-      );
-  }
+smoothscroll.polyfill();
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
 
-  new ScrollMagic.Scene({
-    triggerElement: sliderWrapper[i],
-    triggerHook: 0,
-    duration: '100%'
-  })
-    .setPin(sliderWrapper[i], { pushFollowers: false })
-    .setTween(tweens)
-    // .addIndicators()
+function scrollStatus() {
+  new ScrollMagic.Scene({ triggerElement: paragraph[0], triggerHook: 'onEnter' })
+    .setTween('#hero video', 1, { opacity: 0, scale: 0.5 })
+    .setClassToggle('.js-hero-btn', 'hidden-opacity')
+    .addTo(controller);
+
+  const showHeaderTl = new TimelineMax();
+  showHeaderTl.add(TweenMax.fromTo('#progress-indicator', 0.5, { opacity: 0 }, { opacity: 1 }), 'first').add(TweenMax.fromTo('#logo-top', 0.5, { opacity: 0 }, { opacity: 1 }), 'first');
+  new ScrollMagic.Scene({ triggerElement: sections[0], triggerHook: 0 })
+    .setTween(showHeaderTl)
     .addTo(controller);
 }
+
+function init() {
+  // Slider
+  sliderProjects(controller);
+
+  // progressIndicator
+  progressIndicator();
+
+  // Nav
+  navigation();
+
+  // Smooth scroll on links
+  linkSMoothScroll();
+
+  // Simple slider
+  simpleSlider(controller);
+
+  scrollStatus();
+
+  const txtReveal = document.querySelectorAll('.txt-reveal');
+  for (let i = 0; i < txtReveal.length; i += 1) {
+    new ScrollMagic.Scene({ triggerElement: txtReveal[i], triggerHook: 'onEnter', reverse: false })
+      .setTween(txtReveal[i], 0.6, { backgroundSize: '0% 100%', ease: Power0.easeNone, delay: 0.4 })
+      .addTo(controller);
+  }
+
+  function revealImg() {
+    const imgRevealTrigger = document.querySelectorAll('.img-container img');
+    for (let i = 0; i < imgRevealTrigger.length; i += 1) {
+      new ScrollMagic.Scene({ triggerElement: imgRevealTrigger[i], triggerHook: 'onEnter', duration: '100%' })
+        .setTween(imgRevealTrigger[i], 1, { scale: 0.91, ease: Power0.easeNone })
+        .addTo(controller);
+    }
+  }
+
+  revealImg();
+}
+
+window.addEventListener('DOMContentLoaded', init);

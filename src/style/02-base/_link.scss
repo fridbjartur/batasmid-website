@@ -1,6 +1,24 @@
 a {
   color: $link-color;
   text-decoration: $link-decoration;
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    height: 0%;
+    opacity: 0.1;
+    z-index: -1;
+    transition: all .4s ease-in-out;
+  }
+  
+  &:hover::before, &:focus::before{
+    height: 50%;
+  }
 
   &:hover,
   &:focus {

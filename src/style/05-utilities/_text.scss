@@ -2,6 +2,14 @@
   font-size: $font-size-base * 0.8 !important;
 }
 
+.text-big{
+  font-size: $font-size-base * 1.20;
+}
+
+.text-bold{
+  font-weight: $headings-font-weight;
+}
+
 .text-left {
   text-align: left !important;
 }
@@ -24,4 +32,25 @@
 
 .text-hyphenate {
   @include text-hyphenate;
+}
+
+.txt-reveal {
+  display: inline;
+  background-image: linear-gradient($text-color 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.quote{
+  position: relative;
+
+  &::before{
+    content: "“";
+    font-size: 8rem;
+    line-height: 0;
+    font-weight: $headings-font-weight;
+    left: 0rem;
+    top: 1rem;
+    position: absolute;
+  }
 }

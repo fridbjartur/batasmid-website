@@ -1,0 +1,13 @@
+#logo-top{
+    width: 110px;
+    position: fixed;
+    z-index: 8888888888;
+    cursor: pointer;
+    padding: 3px;
+
+    .logo-path{
+        fill: $text-color;
+    }
+
+    @include spacing-absolute(top, left);
+}

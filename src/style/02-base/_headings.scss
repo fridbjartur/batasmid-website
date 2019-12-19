@@ -13,5 +13,19 @@
     margin-bottom: 0;
   }
 }
-
 @include scale-headings;
+
+
+#avrik{
+h2 {
+  @include fluid-type(font-size, 700px, 1200px, 60px, 100px);
+}
+}
+
+#um, #samband{
+  #{$headings}{
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    margin-bottom: $font-size-base * 1.2;
+  }
+}

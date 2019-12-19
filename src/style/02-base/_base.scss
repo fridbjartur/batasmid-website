@@ -1,5 +1,6 @@
-html {
+html, body {
   box-sizing: border-box;
+  overflow-x:hidden; 
 }
 
 *,
@@ -77,4 +78,8 @@ hr {
   border-top: 1px solid;
   color: inherit;
   opacity: 0.2;
+}
+
+p{
+  letter-spacing: 0.03rem;
 }

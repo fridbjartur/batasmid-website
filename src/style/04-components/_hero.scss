@@ -1,0 +1,41 @@
+#hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  
+    video{
+      position: fixed;
+      transform-origin: center;
+      opacity: 0.7;
+    }
+
+    .hero-logo{
+        position: absolute;
+        width: 25vw;
+        min-width: 200px;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+
+        .cls-1{
+            fill: $text-color;
+        }
+
+
+      @include mq(md) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .btn-secondary{
+      position: absolute;
+      bottom: 85px;
+      left: 50%;
+      transform: translate(-50%);
+
+      @include mq(md) {
+        bottom: 30px;
+      }
+      }
+  }

@@ -1,0 +1,26 @@
+#loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: $global-bg;
+    background-image: url("/static/loader.gif");
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 99999999999999999999999999999999;
+
+    .loading-text{
+      position: absolute;
+      left: 50%;
+      top: 68%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -68%);
+      width: 90%;
+      text-align: center;
+    }
+  }

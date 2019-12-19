@@ -6,6 +6,11 @@
   display: none !important;
 }
 
+.hidden-opacity{
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
 @media print {
   .hidden-print {
     display: none !important;

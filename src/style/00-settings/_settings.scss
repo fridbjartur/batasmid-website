@@ -1,7 +1,8 @@
 // Global
 $font-antialiased: false !default;
-$font-size-base: 1.3rem !default;
-$font-family-base: "Ines-Roman" !default;
+$font-size-base: 1.1rem !default;
+$font-family-base: "Ines" !default;
+$font-family-secondary: "Fakt" !default;
 $font-weight-base: normal !default;
 $line-height-base: 1.7 !default;
 $global-bg: #111111 !default;
@@ -17,11 +18,14 @@ $spacers: (
 ) !default;
 
 // Headings
-$headings: ("h1, .h1", "h2, .h2", "h3, .h3", "h4, .h4", "h5, .h5", "h6, .h6") !default;
+$headings: ("h1, .h1", "h2, .h2", "h3, .h3") !default;
+$h1-font-size: 6rem !default;
+$h2-font-size: 1.1rem !default;
+$h3-font-size: 1.1rem !default;
 
 $headings-spacing: 0.4em !default;
-$headings-font-family: inherit !default;
-$headings-font-weight: 700 !default;
+$headings-font-family: $font-family-secondary !default;
+$headings-font-weight: bold !default;
 $headings-line-height: 1.2 !default;
 $headings-color: inherit !default;
 
@@ -29,10 +33,13 @@ $type-scale-base: $font-size-base !default;
 $type-scale: 1.25 !default;
 
 // Link
-$link-color: #0283f1 !default;
+$link-color: #fff !default;
 $link-hover-color: $link-color !default;
 $link-decoration: none !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
+
+// Nav
+$font-size-menu: 3.5vw;
 
 // Breakpoints
 $mq-breakpoints: (
@@ -103,6 +110,7 @@ $icons: (
 
 // Button
 $button-selector: ".btn" !default;
+$button-selector-secondary: ".btn-secondary" !default;
 $button-padding-vertical: 0.375em !default;
 $button-padding-horizontal: 1em !default;
 $button-bg: transparent !default;

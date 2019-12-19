@@ -1,5 +1,10 @@
-<div id="hero">
-        <video autoplay preload autobuffer loop muted playsinline webkit-playsinline>
-            <source src="static/bg.mp4" type="video/mp4" ></source>
+<div id="hero" class="">
+        <video class="media-hero vidsmall" autoplay preload autobuffer loop muted playsinline webkit-playsinline>
+            <source src="/static/small.mp4" type="video/mp4" ></source>
         </video>
+        <video class="media-hero vidbig" autoplay preload autobuffer loop muted playsinline webkit-playsinline>
+            <source src="/static/big.mp4" type="video/mp4" ></source>
+        </video>
+        ${require('./hero-logo.html')}
+        <a class="btn-secondary js-hero-btn" href="#intro">Uppdaga</a>
 </div>

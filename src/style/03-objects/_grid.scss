@@ -11,6 +11,12 @@
 .row {
   @include row;
 }
+.row-full-width {
+  @include row;
+  @include mq(md) {
+    @include row-no-gutter;
+	}
+}
 
 .row-full-height {
   @include row;
@@ -22,19 +28,24 @@
   @include column-base;
 }
 
-.col-top {
-  align-self: start;
-}
-
-.col-center {
-  align-self: center;
-}
-
-.col-bottom {
-  align-self: end;
-}
-
 // Generate columns for all breakpoints
 @include loop-breakpoints {
   @include loop-columns($breakpoint);
+}
+
+
+// Spacing
+.row-spacing{
+  margin-bottom: 150px;
+  @include mq(md) {
+    margin-bottom: 250px;
+  }
+    
+  .img-container{
+    margin-bottom: 50px;
+  }
+}
+
+.row-last{
+  margin-bottom: 6rem;
 }

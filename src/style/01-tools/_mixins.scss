@@ -12,6 +12,11 @@
   $transition: $button-transition,
   $cursor-pointer: $button-cursor-pointer
 ) {
+  font-size: $font-size-base  * 0.80;
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   display: inline-block;
   vertical-align: middle;
   padding: $padding-vertical $padding-horizontal;
@@ -24,6 +29,10 @@
 
   @if ($cursor-pointer) {
     cursor: pointer;
+  }
+
+  @include mq(md) {
+    font-size: $font-size-base * 0.70;
   }
 }
 
@@ -107,6 +116,56 @@
   }
 }
 
+@mixin button-style-secondary(
+  $padding-vertical: $button-padding-vertical,
+  $padding-horizontal: $button-padding-horizontal,
+  $bg: $button-bg,
+  $color: $button-color,
+  $hover-bg: $button-hover-bg,
+  $hover-color: $button-hover-color,
+  $hover-border-color: $button-hover-border-color,
+  $active-bg: $button-active-bg,
+  $active-color: $button-active-color,
+  $border-width: $button-border-width,
+  $border-color: $button-border-color,
+  $border-radius: $button-border-radius
+) {
+  border: none;
+  color: $color;
+  padding-top: $padding-vertical / 2;
+  padding-bottom: $padding-vertical  / 2;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: $color;
+    opacity: 0.2;
+    transition: all .4s ease;
+}
+
+&:hover::before{
+  height: 100%;
+}
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+    background-color: none;
+    color: $hover-color;
+  }
+
+  &:active {
+    background-color: none;
+    color: $active-color;
+  }
+}
+
 @mixin button-disabled($disabled-opacity: $button-disabled-opacity) {
   &.disabled,
   &:disabled {
@@ -119,6 +178,11 @@
 @mixin button {
   @include button-base;
   @include button-style;
+  @include button-disabled;
+}
+@mixin button-secondary {
+  @include button-base;
+  @include button-style-secondary;
   @include button-disabled;
 }
 

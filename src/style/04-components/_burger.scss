@@ -69,7 +69,7 @@
       }
     }
   
-    .burger-active & span {
+    .is-opened-navi & span {
       &:first-of-type {
         top: 0;
         transform: translateY(6px) rotate(45deg) translateZ(0);
@@ -84,7 +84,7 @@
   
   .burger-nav {
     position: fixed;
-    z-index: 999999;
+    z-index: 8888888888;
     cursor: pointer;
     padding: 3px;
   
@@ -112,6 +112,6 @@
         }
       }
     }
-    @include spacing-absolute(top, left);
+    @include spacing-absolute(top, right);
   }
   

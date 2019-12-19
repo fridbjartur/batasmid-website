@@ -1,3 +1,19 @@
 #{$button-selector} {
   @include button;
 }
+#{$button-selector-secondary} {
+  @include button-secondary;
+}
+
+.btn-unstyled{
+  @include button-unstyled;
+  @include button-base;
+
+  &:hover,
+  &:focus, 
+  &:active {
+    outline: 0;
+    text-decoration: none;
+    background-color: none;
+  }
+}
