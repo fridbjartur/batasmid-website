@@ -1,4 +1,6 @@
-# 🚀 Static HTML Webpack Boilerplate
+# This is only public for job searching purposes, so please respect the data.
+
+
 [![GitHub version](https://badge.fury.io/gh/erickzhao%2Fstatic-html-webpack-boilerplate.svg)](https://badge.fury.io/gh/erickzhao%2Fstatic-html-webpack-boilerplate)
 [![Build Status](https://api.travis-ci.org/erickzhao/static-html-webpack-boilerplate.svg?branch=master)](https://travis-ci.org/erickzhao/static-html-webpack-boilerplate)
 [![Dev Dependencies](https://david-dm.org/erickzhao/static-html-webpack-boilerplate/dev-status.svg)](https://david-dm.org/erickzhao/static-html-webpack-boilerplate?type=dev)
